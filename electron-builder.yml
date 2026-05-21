@@ -1,0 +1,66 @@
+appId: com.hermeswindos.desktop
+productName: Hermes Windos
+afterPack: build/afterPack.js
+directories:
+  buildResources: build
+files:
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,CHANGELOG.zh-CN.md,README.md}"
+  - "!{.env,.env.*,.npmrc,pnpm-lock.yaml}"
+  - "!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}"
+asarUnpack:
+  - resources/**
+win:
+  executableName: hermes-windos
+  icon: build/icon.png
+  signAndEditExecutable: false
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  createDesktopShortcut: always
+  oneClick: true
+  perMachine: false
+mac:
+  artifactName: ${name}-${version}-${arch}-${os}.${ext}
+  icon: build/icon.icns
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.inherit.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  notarize: true
+dmg:
+  artifactName: ${name}-${version}-${arch}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+    - rpm
+  maintainer: Hermes Windos
+  vendor: Hermes Windos
+  category: Utility
+  synopsis: Hermes Agent 的 Windows-first 桌面控制台
+  description: >-
+    Hermes Windos 是围绕 Hermes Agent 构建的桌面控制台，用于安装、配置、聊天、
+    记忆、工具、调度、网关与远程运行工作流管理。
+appImage:
+  artifactName: ${name}-${version}.${ext}
+rpm:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false
+publish:
+  # 发布到你自己的 GitHub 仓库前，请确认下面两项与目标仓库一致。
+  # 如果你的 GitHub 用户名或组织名不是 hermeswindos，请改掉 owner。
+  provider: github
+  owner: hermeswindos
+  repo: hermes-windos

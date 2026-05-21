@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hermes Windos | The Windows desktop app for Hermes Agent</title>
+    <meta
+      name="description"
+      content="Hermes Windos is the Windows desktop app for Hermes Agent, bringing install, chat, tools, memory, schedules, gateways, and remote workflows into one desktop control surface."
+    />
+    <meta
+      name="keywords"
+      content="Hermes Windos,Hermes Agent desktop app,Hermes Agent Windows app,AI agent desktop,open source AI agent GUI"
+    />
+    <meta
+      property="og:title"
+      content="Hermes Windos | The Windows desktop app for Hermes Agent"
+    />
+    <meta
+      property="og:description"
+      content="Install, configure, and run Hermes Agent through a Windows-first desktop experience."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hermeswindos.com/" />
+    <meta
+      property="og:image"
+      content="https://www.hermeswindos.com/assets/brand/hermes-windos-1024x1024.png"
+    />
+    <link rel="canonical" href="https://www.hermeswindos.com/" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/brand/hermes-windos-1024x1024.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/brand/hermes-windos-1024x1024.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-shell">
+      <div class="ambient ambient-left"></div>
+      <div class="ambient ambient-right"></div>
+      <div class="grid-overlay"></div>
+
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="Hermes Windos home">
+          <img
+            src="./assets/brand/hermes-windos-1024x1024.png"
+            alt="Hermes Windos"
+            class="brand-mark"
+          />
+          <span class="brand-copy">
+            <strong>Hermes Windos</strong>
+            <span id="brand-subtitle">The Windows desktop app for Hermes Agent</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" id="nav"></nav>
+
+        <div class="header-actions">
+          <div class="lang-toggle" aria-label="Language toggle">
+            <button class="lang-btn active" data-lang-switch="zh">中</button>
+            <button class="lang-btn" data-lang-switch="en">EN</button>
+          </div>
+          <a
+            class="button button-primary button-small"
+            href="https://github.com/hermeswindos/hermes-windos/releases/"
+            target="_blank"
+            rel="noreferrer"
+            id="header-download"
+          ></a>
+        </div>
+      </header>
+
+      <main id="page-root"></main>
+      <footer class="site-footer" id="site-footer"></footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
