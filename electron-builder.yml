@@ -62,5 +62,5 @@ publish:
   # 发布到你自己的 GitHub 仓库前，请确认下面两项与目标仓库一致。
   # 如果你的 GitHub 用户名或组织名不是 hermeswindos，请改掉 owner。
   provider: github
-  owner: hermeswindos
+  owner: wanglongjun174116
   repo: hermes-windos
