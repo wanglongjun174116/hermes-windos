@@ -31,7 +31,7 @@ const screenshots = [
   },
 ];
 
-const REPO_OWNER = "hermeswindos";
+const REPO_OWNER = "wanglongjun174116";
 const REPO_NAME = "hermes-windos";
 const REPO_GITHUB_URL = `https://github.com/${REPO_OWNER}/${REPO_NAME}`;
 const REPO_RELEASES_URL = `${REPO_GITHUB_URL}/releases/`;
